@@ -31,7 +31,7 @@ public class VendingMachine {
     public void refillStock(Map<String, Integer> stock){
         for (var entry : stock.entrySet()) {
             var ingredient = entry.getKey();
-            var updatedValue = this.stock.get(ingredient) - entry.getValue();
+            var updatedValue = this.stock.get(ingredient) + entry.getValue();
             this.stock.put(ingredient, updatedValue);
         }
         
